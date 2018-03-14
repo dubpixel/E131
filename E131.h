@@ -40,6 +40,15 @@
 #   define _UDP EthernetUDP
 #   define INT_ETHERNET
 #   define NO_DOUBLE_BUFFER
+#elif defined(__MK20DX128__) || defined(__MK20DX256__)
+#   include <Ethernet.h>
+#   include <EthernetUdp.h>
+#   include <avr/pgmspace.h>
+#   include <utility/util.h>
+#   define _UDP EthernetUDP
+#   define INT_ETHERNET
+#   define NO_DOUBLE_BUFFER
+
 #endif
 
 /* Defaults */
